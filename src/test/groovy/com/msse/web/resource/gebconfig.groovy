@@ -17,7 +17,7 @@ environments {
         driver = { new ChromeDriver() }
     }
 
-    browser.setBaseUrl("http://localhost:${port}")
+  browser.setBaseUrl("http://localhost:${port}")
 }
 
 
