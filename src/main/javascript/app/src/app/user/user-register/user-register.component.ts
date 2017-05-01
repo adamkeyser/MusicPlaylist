@@ -8,8 +8,8 @@ import {Router} from "@angular/router";
 })
 export class UserRegisterComponent implements OnInit {
 
-  @ViewChild('f')
-
+ // @ViewChild('f')
+  registerForm;
 
   ngOnInit() {
 

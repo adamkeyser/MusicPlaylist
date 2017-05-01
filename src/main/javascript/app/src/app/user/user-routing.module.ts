@@ -1,9 +1,9 @@
-import {NgModule} from "@angular/core";
+/**import {NgModule} from "@angular/core";
 import {Routes, RouterModule} from "@angular/router";
 import {UserRegisterComponent} from "./user-register/user-register.component";
 
 const routes: Routes = [
-  {
+ /*** {
     path: 'add',
     component: UserRegisterComponent,
   }
@@ -15,3 +15,4 @@ const routes: Routes = [
 })
 export class UserRoutingModule {
 }
+ */

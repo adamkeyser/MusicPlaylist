@@ -10,6 +10,7 @@ import { SongComponent } from './component/song/song.component';
 import {routing} from "./app.routing";
 import { AlbumDetailsComponent } from './component/album-details/album-details.component';
 import { SongDetailsComponent } from './component/song-details/song-details.component';
+import {UserRegisterComponent} from "./user/user-register/user-register.component";
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { SongDetailsComponent } from './component/song-details/song-details.comp
     AlbumComponent,
     SongComponent,
     AlbumDetailsComponent,
-    SongDetailsComponent
+    SongDetailsComponent,
+    UserRegisterComponent
   ],
   imports: [
     BrowserModule,
