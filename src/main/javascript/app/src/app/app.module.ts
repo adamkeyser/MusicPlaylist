@@ -13,6 +13,7 @@ import {routing} from "./app.routing";
 import { AlbumDetailsComponent } from './component/album-details/album-details.component';
 import { SongDetailsComponent } from './component/song-details/song-details.component';
 import { RegisterComponent } from './register/register.component';
+import {AuthenGuard} from "./register/authen.guard";
 
 
 @NgModule({
@@ -23,15 +24,15 @@ import { RegisterComponent } from './register/register.component';
     SongComponent,
     AlbumDetailsComponent,
     SongDetailsComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing,
+    routing
   ],
-  providers: [SpotifyService],
+  providers: [SpotifyService, AuthenGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,8 @@
 import { Component} from '@angular/core';
 import {Router} from "@angular/router";
 import {NgForm} from "@angular/forms";
+import {AuthenService} from "../datamodel/authen.service";
+
 
 @Component({
   selector: 'app-register',
@@ -8,20 +10,27 @@ import {NgForm} from "@angular/forms";
  // templateUrl: './authen.component.html',
   styleUrls: ['./register.component.css']
 })
+
 export class RegisterComponent {
 
   public username: string;
   public password: string;
   public message: string;
 
-
-  constructor (private router: Router) {}
+  constructor (private router: Router, private authen: AuthenService) {}
 
   authentication (form: NgForm) {
     if (form.valid)
-      this.router.navigateByUrl("/register")
+    {this.authen.authentication(this.username, this.password).subscribe(
+      response => {
+        if (response) {
+          this.router.navigateByUrl("/register");
+        }
+          this.message = "Invalid Authentication"
+      }
+    )}
     else
-      this.message = "Invalid Data"
+    {this.message = "Invalid Data";}
   }
 
 }

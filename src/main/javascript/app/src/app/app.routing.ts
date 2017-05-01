@@ -5,12 +5,13 @@ import {AlbumComponent} from "./component/album/album.component";
 import {ArtistComponent} from "./component/artist/artist.component";
 import {AlbumDetailsComponent} from "./component/album-details/album-details.component";
 import {RegisterComponent} from "./register/register.component";
+import {AuthenGuard} from "./register/authen.guard";
 
 
 
 const APP_ROUTES: Routes = [
 
-  {path: 'register', component: RegisterComponent},
+  {path: 'register', component: RegisterComponent, canActivate: [AuthenGuard]},
  // {path: 'register', loadChildren: "app/register/register.module#RegisterModule", canActivate: [RegisterComponent]},
   {path: 'track/:id', component: SongComponent},
   {path: 'album', component: AlbumComponent},
