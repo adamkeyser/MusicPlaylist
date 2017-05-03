@@ -20,6 +20,16 @@ export class SpotifyService {
       .catch(this.handleError);
   }
 
+  /**
+   getArtist(name: String) {
+    let artistUrl = 'https://api.spotify.com/v1/search?q=' + name + '&type=artist';
+    return this.http
+      .get(artistUrl, this.jwt())
+      .map(res => res.json())
+      .catch(this.handleError);
+
+   */
+
   getAlbum(name: String) {
     let albumUrl = 'https://api.spotify.com/v1/search?q=' + name + '&type=album';
     console.log('****** ' + albumUrl)
@@ -28,6 +38,17 @@ export class SpotifyService {
       .map(res => res.json())
       .catch(this.handleError);
   }
+
+  /**
+   getAlbum(name: String) {
+    let albumUrl = 'https://api.spotify.com/v1/search?q=' + name + '&type=album';
+    console.log('****** ' + albumUrl)
+    return this.http
+      .get(albumUrl, this.jwt())
+      .map(res => res.json())
+      .catch(this.handleError);
+
+   */
 
   getSong(name: String) {
     let songUrl = 'https://api.spotify.com/v1/search?q=' + name + '&type=track';
@@ -38,6 +59,17 @@ export class SpotifyService {
       .catch(this.handleError);
   }
 
+  /**
+   getSong(name: String) {
+    let songUrl = 'https://api.spotify.com/v1/search?q=' + name + '&type=track';
+    console.log('****** ' + songUrl)
+    return this.http
+      .get(songUrl, this.jwt())
+      .map(res => res.json())
+      .catch(this.handleError);
+  }
+   */
+
   getAlbumDetails(url: string) {
     let albumIdUrl = url;
     console.log('****** ' + url)
@@ -47,6 +79,17 @@ export class SpotifyService {
       .catch(this.handleError);
 
   }
+
+  /**
+   getAlbumDetails(url: string) {
+    let albumIdUrl = url;
+    console.log('****** ' + url)
+    return this.http
+      .get(albumIdUrl, this.jwt())
+      .map(res => res.json())
+      .catch(this.handleError);
+   */
+
 
   private handleError (error: Response | any) {
     let errMsg: string;

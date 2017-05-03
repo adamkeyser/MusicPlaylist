@@ -16,6 +16,7 @@ import {UserComponent} from "./user/user.component";
 import {PlaylistEditorComponent} from "./user/user-register/playlist-editor/playlist-editor.component";
 import {AddSongComponent} from "./user/user-register/playlist-editor/add-song/add-song.component";
 import { AngularjsComponentComponent } from './component/angularjs-component/angularjs-component.component';
+import { DatamodelComponent } from './datamodel/datamodel.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AngularjsComponentComponent } from './component/angularjs-component/ang
     PlaylistCreatorComponent,
     UserComponent,
     AddSongComponent,
-    AngularjsComponentComponent
+    AngularjsComponentComponent,
+    DatamodelComponent
   ],
   imports: [
     BrowserModule,
